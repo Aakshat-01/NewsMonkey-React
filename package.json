@@ -2,7 +2,6 @@
   "name": "newsapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Aakshat-01.github.io/NewsMonkey-React",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.7.0",
