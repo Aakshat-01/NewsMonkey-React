@@ -44,7 +44,8 @@ export default class News extends Component {
 
       this.props.setProgress(10);
 
-      const url = `https://gnews.io/api/v4/top-headlines?country=${this.props.country}&lang=en&category=${this.props.category}&max=${this.props.pageSize}&page=${this.state.page}&apikey=${this.props.apiKey}`;
+      // const url = `https://api.currentsapi.services/v1/latest-news?country=${this.props.country}&lang=en&category=${this.props.category}&max=${this.props.pageSize}&page=${this.state.page}&apikey=${this.props.apiKey}`;
+      const url = `https://api.currentsapi.services/v1/latest-news?apiKey=${this.props.apiKey}&category=${this.props.category}&language=en&country=${this.props.country}&page_size=${this.props.pageSize}&page_number=${this.state.page}`;
       let data = await fetch(url);
 
       this.props.setProgress(30);
@@ -77,7 +78,8 @@ export default class News extends Component {
       let nextPage = this.state.page + 1;
       this.setState({ loading: true });
 
-      const url = `https://gnews.io/api/v4/top-headlines?country=${this.props.country}&lang=en&category=${this.props.category}&max=${this.props.pageSize}&page=${nextPage}&apikey=${this.props.apiKey}`;
+      // const url = `https://gnews.io/api/v4/top-headlines?country=${this.props.country}&lang=en&category=${this.props.category}&max=${this.props.pageSize}&page=${nextPage}&apikey=${this.props.apiKey}`;
+      const url = `https://api.currentsapi.services/v1/latest-news?apiKey=${this.props.apiKey}&category=${this.props.category}&language=en&country=${this.props.country}&page_size=${this.props.pageSize}&page_number=${this.state.page}`;
       let data = await fetch(url);
       let parsedData = await data.json();
 
