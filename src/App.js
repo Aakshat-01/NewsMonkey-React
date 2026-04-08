@@ -8,8 +8,11 @@ import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
   pageSize = 5;
-  apiKey="1316451980ed93c2837e6aa0d576d8e3"
+  // apiKey="1316451980ed93c2837e6aa0d576d8e3"
   // apiKey="83b9fa329abe03f87de5ad57b91946a3"
+  // Currents API
+  // apiKey="PfDE3lks2wTSKDKGWp5xctjfybWMyULi3rVlMNsI95mTL35j"  
+  apiKey="Ahznx-trgv-d6vbH5zIDNEv8i5qKyYzzeI6Me9oJWvttIXPV"
 
   state = {
     progress: 0,
@@ -66,7 +69,7 @@ export default class App extends Component {
                   key="nation"
                   pageSize={this.pageSize}
                   country="in"
-                  category="nation"
+                  category="regional"
                 />
               }
             />
